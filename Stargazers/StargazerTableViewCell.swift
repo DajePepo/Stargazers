@@ -8,31 +8,48 @@
 
 import UIKit
 
-class StargazerTableViewCell: UITableViewCell {
+class StargazerTableViewCell: UITableViewCell, ImageLoaderProtocol  {
     
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var name: UILabel!
     
+    var imageUrl: String? {
+        didSet {
+            downloadImageWithUrl { [unowned self] image in
+                self.avatar.image = image
+            }
+        }
+    }
+    
     func configure(viewModel: StargazerViewModel) {
         name.text = viewModel.name
-        avatar.imageFromServerURL(urlString: viewModel.imageUrl)
+        imageUrl = viewModel.imageUrl
     }
 }
 
-extension UIImageView {
-    public func imageFromServerURL(urlString: String) {
+protocol ImageLoaderProtocol {
+    var imageUrl: String? { get set }
+    func downloadImageWithUrl(completion: @escaping (UIImage) -> Void)
+}
+
+extension ImageLoaderProtocol {
+    
+    func downloadImageWithUrl(completion: @escaping (UIImage) -> Void) {
         
-        URLSession.shared.dataTask(with: NSURL(string: urlString)! as URL, completionHandler: { (data, response, error) -> Void in
+        guard let imageUrl = self.imageUrl else { return }
+        
+        URLSession.shared.dataTask(with: NSURL(string: imageUrl)! as URL, completionHandler: { (data, response, error) -> Void in
             if error != nil {
                 print(error ?? "Generic error")
                 return
             }
             
-            if let response = response, let url = response.url, url.absoluteString == urlString {
-                DispatchQueue.main.async(execute: { () -> Void in
-                    let image = UIImage(data: data!)
-                    self.image = image
-                })
+            if let response = response, let url = response.url, url.absoluteString == self.imageUrl {
+                if let data = data, let image = UIImage(data: data) {
+                    DispatchQueue.main.async(execute: { () -> Void in
+                        completion(image)
+                    })
+                }
             }
         }).resume()
     }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		10939B665A8F0D3815886D4F /* Pods_StargazersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 190F19D8B1203D321BFB50EF /* Pods_StargazersUITests.framework */; };
-		633BFD065AA3D6736FF9E510 /* Pods_StargazersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27EC8623C7A73AE8A89183E2 /* Pods_StargazersTests.framework */; };
 		9A05E79D1F5AF22500FC1124 /* StargazerDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A05E79C1F5AF22500FC1124 /* StargazerDataManager.swift */; };
 		9A05E79F1F5AF43F00FC1124 /* StargazersViewModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A05E79E1F5AF43F00FC1124 /* StargazersViewModelController.swift */; };
 		9A05E7A11F5AF4AC00FC1124 /* StargazerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A05E7A01F5AF4AC00FC1124 /* StargazerViewModel.swift */; };
@@ -18,20 +17,12 @@
 		9AFC229C1F5AD2EA00F43F4B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFC229A1F5AD2EA00F43F4B /* Main.storyboard */; };
 		9AFC229E1F5AD2EA00F43F4B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AFC229D1F5AD2EA00F43F4B /* Assets.xcassets */; };
 		9AFC22A11F5AD2EA00F43F4B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFC229F1F5AD2EA00F43F4B /* LaunchScreen.storyboard */; };
-		9AFC22AC1F5AD2EB00F43F4B /* StargazersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFC22AB1F5AD2EB00F43F4B /* StargazersTests.swift */; };
 		9AFC22B71F5AD2EB00F43F4B /* StargazersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFC22B61F5AD2EB00F43F4B /* StargazersUITests.swift */; };
 		9AFC22CB1F5AEEB400F43F4B /* Stargazer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AFC22CA1F5AEEB400F43F4B /* Stargazer.swift */; };
 		DC5066550BFC39F4574F978D /* Pods_Stargazers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9081AF0F4D7BE0089D73B29F /* Pods_Stargazers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9AFC22A81F5AD2EB00F43F4B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AFC228B1F5AD2EA00F43F4B /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9AFC22921F5AD2EA00F43F4B;
-			remoteInfo = Stargazers;
-		};
 		9AFC22B31F5AD2EB00F43F4B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9AFC228B1F5AD2EA00F43F4B /* Project object */;
@@ -58,9 +49,6 @@
 		9AFC229D1F5AD2EA00F43F4B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9AFC22A01F5AD2EA00F43F4B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9AFC22A21F5AD2EA00F43F4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9AFC22A71F5AD2EB00F43F4B /* StargazersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StargazersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AFC22AB1F5AD2EB00F43F4B /* StargazersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StargazersTests.swift; sourceTree = "<group>"; };
-		9AFC22AD1F5AD2EB00F43F4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9AFC22B21F5AD2EB00F43F4B /* StargazersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StargazersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFC22B61F5AD2EB00F43F4B /* StargazersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StargazersUITests.swift; sourceTree = "<group>"; };
 		9AFC22B81F5AD2EB00F43F4B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,14 +65,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC5066550BFC39F4574F978D /* Pods_Stargazers.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9AFC22A41F5AD2EB00F43F4B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				633BFD065AA3D6736FF9E510 /* Pods_StargazersTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				9AFC22951F5AD2EA00F43F4B /* Stargazers */,
-				9AFC22AA1F5AD2EB00F43F4B /* StargazersTests */,
 				9AFC22B51F5AD2EB00F43F4B /* StargazersUITests */,
 				9AFC22941F5AD2EA00F43F4B /* Products */,
 				FCF29CC898B83656C3F62853 /* Pods */,
@@ -125,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				9AFC22931F5AD2EA00F43F4B /* Stargazers.app */,
-				9AFC22A71F5AD2EB00F43F4B /* StargazersTests.xctest */,
 				9AFC22B21F5AD2EB00F43F4B /* StargazersUITests.xctest */,
 			);
 			name = Products;
@@ -142,15 +120,6 @@
 				9AFC22C81F5AEB2B00F43F4B /* Supporting Files */,
 			);
 			path = Stargazers;
-			sourceTree = "<group>";
-		};
-		9AFC22AA1F5AD2EB00F43F4B /* StargazersTests */ = {
-			isa = PBXGroup;
-			children = (
-				9AFC22AB1F5AD2EB00F43F4B /* StargazersTests.swift */,
-				9AFC22AD1F5AD2EB00F43F4B /* Info.plist */,
-			);
-			path = StargazersTests;
 			sourceTree = "<group>";
 		};
 		9AFC22B51F5AD2EB00F43F4B /* StargazersUITests */ = {
@@ -251,27 +220,6 @@
 			productReference = 9AFC22931F5AD2EA00F43F4B /* Stargazers.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9AFC22A61F5AD2EB00F43F4B /* StargazersTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9AFC22BE1F5AD2EB00F43F4B /* Build configuration list for PBXNativeTarget "StargazersTests" */;
-			buildPhases = (
-				86A25FE5A0B396B88792B60F /* [CP] Check Pods Manifest.lock */,
-				9AFC22A31F5AD2EB00F43F4B /* Sources */,
-				9AFC22A41F5AD2EB00F43F4B /* Frameworks */,
-				9AFC22A51F5AD2EB00F43F4B /* Resources */,
-				6EE3040E591CF7EF5C36B60C /* [CP] Embed Pods Frameworks */,
-				EC5E689EDA74B80BC254B537 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9AFC22A91F5AD2EB00F43F4B /* PBXTargetDependency */,
-			);
-			name = StargazersTests;
-			productName = StargazersTests;
-			productReference = 9AFC22A71F5AD2EB00F43F4B /* StargazersTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		9AFC22B11F5AD2EB00F43F4B /* StargazersUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AFC22C11F5AD2EB00F43F4B /* Build configuration list for PBXNativeTarget "StargazersUITests" */;
@@ -308,12 +256,6 @@
 						DevelopmentTeam = A5KJ3Z3G6S;
 						ProvisioningStyle = Automatic;
 					};
-					9AFC22A61F5AD2EB00F43F4B = {
-						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = A5KJ3Z3G6S;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 9AFC22921F5AD2EA00F43F4B;
-					};
 					9AFC22B11F5AD2EB00F43F4B = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = A5KJ3Z3G6S;
@@ -336,7 +278,6 @@
 			projectRoot = "";
 			targets = (
 				9AFC22921F5AD2EA00F43F4B /* Stargazers */,
-				9AFC22A61F5AD2EB00F43F4B /* StargazersTests */,
 				9AFC22B11F5AD2EB00F43F4B /* StargazersUITests */,
 			);
 		};
@@ -350,13 +291,6 @@
 				9AFC22A11F5AD2EA00F43F4B /* LaunchScreen.storyboard in Resources */,
 				9AFC229E1F5AD2EA00F43F4B /* Assets.xcassets in Resources */,
 				9AFC229C1F5AD2EA00F43F4B /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9AFC22A51F5AD2EB00F43F4B /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,36 +332,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StargazersUITests/Pods-StargazersUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6EE3040E591CF7EF5C36B60C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StargazersTests/Pods-StargazersTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		86A25FE5A0B396B88792B60F /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		89E7FC81E32A287121538E89 /* [CP] Copy Pods Resources */ = {
@@ -475,21 +379,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		EC5E689EDA74B80BC254B537 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StargazersTests/Pods-StargazersTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		F70870E3733DA164B9CDAEDA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -522,14 +411,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9AFC22A31F5AD2EB00F43F4B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9AFC22AC1F5AD2EB00F43F4B /* StargazersTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9AFC22AE1F5AD2EB00F43F4B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -541,11 +422,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9AFC22A91F5AD2EB00F43F4B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9AFC22921F5AD2EA00F43F4B /* Stargazers */;
-			targetProxy = 9AFC22A81F5AD2EB00F43F4B /* PBXContainerItemProxy */;
-		};
 		9AFC22B41F5AD2EB00F43F4B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9AFC22921F5AD2EA00F43F4B /* Stargazers */;
@@ -694,38 +570,6 @@
 			};
 			name = Release;
 		};
-		9AFC22BF1F5AD2EB00F43F4B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9445AF5F421DD5FBE9347150 /* Pods-StargazersTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = A5KJ3Z3G6S;
-				INFOPLIST_FILE = StargazersTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tecnojam.StargazersTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stargazers.app/Stargazers";
-			};
-			name = Debug;
-		};
-		9AFC22C01F5AD2EB00F43F4B /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F2FF55A8D19053B839A5C9A /* Pods-StargazersTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = A5KJ3Z3G6S;
-				INFOPLIST_FILE = StargazersTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.tecnojam.StargazersTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stargazers.app/Stargazers";
-			};
-			name = Release;
-		};
 		9AFC22C21F5AD2EB00F43F4B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF54121E6477D75D4D280D41 /* Pods-StargazersUITests.debug.xcconfig */;
@@ -773,15 +617,6 @@
 			buildConfigurations = (
 				9AFC22BC1F5AD2EB00F43F4B /* Debug */,
 				9AFC22BD1F5AD2EB00F43F4B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9AFC22BE1F5AD2EB00F43F4B /* Build configuration list for PBXNativeTarget "StargazersTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9AFC22BF1F5AD2EB00F43F4B /* Debug */,
-				9AFC22C01F5AD2EB00F43F4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

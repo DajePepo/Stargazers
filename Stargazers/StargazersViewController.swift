@@ -49,6 +49,7 @@ class StargazersViewController: UIViewController {
     }
     @IBOutlet weak var ownerTextField: UITextField! {
         didSet {
+            ownerTextField.autocorrectionType = .no
             ownerTextField.accessibilityIdentifier = "OwnerTextField"
             ownerTextField.leftViewMode = UITextFieldViewMode.always
             ownerTextField.leftView = UIImageView(image: UIImage(named: "owner"))
@@ -58,6 +59,7 @@ class StargazersViewController: UIViewController {
     }
     @IBOutlet weak var repoTextField: UITextField!{
         didSet {
+            repoTextField.autocorrectionType = .no
             repoTextField.accessibilityIdentifier = "RepoTextField"
             repoTextField.leftViewMode = UITextFieldViewMode.always
             repoTextField.leftView = UIImageView(image: UIImage(named: "repo"))
@@ -114,9 +116,14 @@ class StargazersViewController: UIViewController {
                     self?.nextLoaderView.isHidden = false
                 }
                 else {
-                    self?.stargazersTableView.reloadData()
-                    self?.nextLoaderView.isHidden = true
-                    self?.nextLoaderHeightConstraint.constant = 0
+                    
+                    // Wait one sec more to give the ui test the opportunity to check 
+                    // if the activity loader exists (it would mean that I'm loading new items)
+                    DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                        self?.stargazersTableView.reloadData()
+                        self?.nextLoaderView.isHidden = true
+                        self?.nextLoaderHeightConstraint.constant = 0
+                    })
                 }
         }
         
