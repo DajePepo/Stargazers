@@ -9,18 +9,16 @@
 import XCTest
 
 class StargazersUITests: XCTestCase {
+    
+    let owner = "mdiep"
+    let repo = "Tentacle"
+    var app: XCUIApplication!
         
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        app = XCUIApplication()
+        app.launch()
     }
     
     override func tearDown() {
@@ -28,9 +26,67 @@ class StargazersUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testDownloadStargazers() {
+        
+        XCTAssertEqual(app.tables["StargazersTableView"].cells.count, 0)
+        
+        let ownerTextField = self.app.textFields["OwnerTextField"]
+        ownerTextField.tap()
+        ownerTextField.typeText(owner)
+        
+        let repoTextField = self.app.textFields["RepoTextField"]
+        repoTextField.tap()
+        repoTextField.typeText(repo)
+        
+        app.buttons["SearchButton"].tap()
+
+        let notEmpty = NSPredicate(format: "self.cells.count > 0")
+        expectation(for: notEmpty, evaluatedWith: app.tables["StargazersTableView"], handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        
+    }
+    
+    func testRefreshStargazers() {
+        
+    }
+
+    func testDownloadNextStargazers() {
+        
+        let ownerTextField = self.app.textFields["OwnerTextField"]
+        ownerTextField.tap()
+        ownerTextField.typeText(owner)
+        
+        let repoTextField = self.app.textFields["RepoTextField"]
+        repoTextField.tap()
+        repoTextField.typeText(repo)
+        
+        app.buttons["SearchButton"].tap()
+        
+        let notEmpty = NSPredicate(format: "self.cells.count > 0")
+        expectation(for: notEmpty, evaluatedWith: app.tables["StargazersTableView"], handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+
+        let cellsCountBefore = app.tables["StargazersTableView"].cells.count
+        
+        while !app.activityIndicators["ActivityIndicator"].exists {
+            app.tables["StargazersTableView"].swipeUp()
+        }
+        
+        let moreItems = NSPredicate(format: "self.cells.count > %d", cellsCountBefore)
+        expectation(for: moreItems, evaluatedWith: app.tables["StargazersTableView"], handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
+    func testAppDoesNotCrashWithFakeValues() {
+    
+    }
+
+    func testDoNotDownloadWithoutOwner() {
+        
+    }
+    
+    func testDoNotDownloadWithoutRepo() {
+        
     }
     
 }
